@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+}<div class="text-center">
+
+  <p>
+    <a class="btn btn-primary" style="margin-top: 15px; " href="{{url_for('institucional')}}" role="button">Institucional</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px;" href="{{url_for('funcionamento')}}" role="button">Funcionamento</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px;" href="{{url_for('missao')}}" role="button">Missão</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('principios')}}" role="button">Princípios</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('regimento')}}" role="button">Regimento</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="#" role="button">Secretaria</a>
+  </p>
+
+</div>
+
+
+<p class="fs-1 fw-bold" style="text-align: center;">Princípios</p>
+
+<div class="d-flex aling-items-center">
+
+    <ol class="list-group list-group-light list-group-numbered " style="margin-left: 100px;">
+        <li class="list-group-item item border-0" style=" background-color:rgba(144,  203,  44,  0)">Respeito à individualidade;</li>
+        <li class="list-group-item item border-0" style=" background-color:rgba(144,  203,  44,  0)">Incentivo à autonomia e à criatividade;</li>
+        <li class="list-group-item item border-0" style=" background-color:rgba(144,  203,  44,  0)">Formação baseada em valores éticos e cristãos;</li>
+        <li class="list-group-item item border-0" style=" background-color:rgba(144,  203,  44,  0)">Qualificação constante das equipes;</li>
+        <li class="list-group-item item border-0" style=" background-color:rgba(144,  203,  44,  0)">Preocupação e ação com a sustentabilidade do Planeta;</li>
+        <li class="list-group-item item border-0" style=" background-color:rgba(144,  203,  44,  0)">Valorização da cultura e história da humanidade; </li>
+        <li class="list-group-item item border-0" style=" background-color:rgba(144,  203,  44,  0)">Utilização de tecnologias inovadoras.</li>
+      </ol>
+
+</div>
+
+{% endblock conteudo %}

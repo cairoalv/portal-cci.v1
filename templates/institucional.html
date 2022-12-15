@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<div class="text-center">
+
+  <p>
+    <a class="btn btn-primary" style="margin-top: 15px; " href="{{url_for('institucional')}}" role="button">Institucional</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px;" href="{{url_for('funcionamento')}}" role="button">Funcionamento</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px;" href="{{url_for('missao')}}" role="button">Missão</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('principios')}}" role="button">Princípios</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('regimento')}}" role="button">Regimento</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="#" role="button">Secretaria</a>
+  </p>
+
+</div>
+
+<div class="text-center"> <br>  <img src="../static/img/cci2.gif" height="300" width="500"  class="img-fluid hover-shadow" alt="Hollywood Sign on The Hill"> </div>
+
+<p class="fs-1 fw-bold" style="text-align: center;">Institucional</p>
+
+<div class="d-flex aling-items-center">
+
+
+    <p class="font-monospace" style="text-align: justify; font-size: 17px; font-style: italic; margin-left: 100px; margin-right: 100px;">
+
+
+        O CCI foi fundado em 1996 com a implantação gradativa da Educação Infantil e do Ensino Fundamental, pela Sociedade Educativa Braga e Elói Ltda. A iniciativa partiu de um grupo de educadores decididos a promover educação de qualidade e a formar agentes da PAZ e do BEM, por meio de um trabalho voltado para o aperfeiçoamento sociocultural, humano e solidário em ambiente prazeroso.
+
+    Em 2005, ao chegar a formatura dos estudantes da 8ª série, viu-se a necessidade de criar o Centro Educacional CCI Sênior para atender ao Ensino Médio, sendo utilizada a mesma estrutura física e pedagógica já existente.
+
+    Desde então, vem alcançando excelentes resultados no Enem, PAS/UnB e Vestibulares Federais. Já em 2020, o CCI Sênior iniciou a oferta do Novo Ensino Médio com Itinerários Formativos optativos aos estudantes. Além disso,  foi autorizado a oferecer Cursos Técnicos de Nível Médio.
+
+    Ainda em 2020, o Grupo Educacional CCI assumiu a Gestão da Faculdade que funcionava no noturno nas seguintes áreas: Bacharel em Enfermagem, Bacharel em Administração, Licenciatura em Pedagogia, Tecnólogo em Radiologia.
+
+    Nesses 25 anos de história, conquistou parcerias significativas: Sistema Positivo, MenteInovadora (Mind Lab), Educação Ambiental (no CLAT), Educação Tecnológica (Robótica), Socioemocional (Escola da Inteligência), Esportiva e Cultural (PECs), Google For Education, Profissionalizante (Senai), entre tantas outras.
+
+    Atualmente, atende mais de 2000 mil alunos da Educação Infantil ao Ensino Superior e Escola Técnicia, todos beneficiados com uma educação completa e significativa que lhes proporciona o desenvolvimento de habilidades e a capacidade de pesquisar, analisar, discernir e decidir, seguindo preceitos éticos, morais e de cidadania. Com essa base de valores, nossos estudantes se tornam pessoas conscientes e capazes de atuar e transformar a sociedade como verdadeiros agentes da PAZ e do BEM.
+
+    Por todo esse compromisso com a comunidade e pelo excelente trabalho pedagógico de toda a equipe, o CCI e CCI Sênior têm recebido diversos prêmios de reconhecimento como a melhor escola da região. Somos mais de 300 colaboradores empenhados em formar profissionais competentes, com mentes brilhantes, mas acima de tudo, que amam e cultivam gente.
+
+    Aos Educadores que abraçaram esse sonho, nosso muito obrigado pelo privilégio de fazer parte dessa grande Família!
+</p></div>
+
+<div class="container" style="margin-top: 90px;">
+		<div class="row ">
+			<div class="col">
+				<div class="card align-items-center" style="width: 18rem;">
+					<img src="../static/img/missao-removebg-preview.png" class="card-img-top" alt="Sunset Over the Sea"
+						style="height: 120px; width: 120px; margin-top: 20px;" />
+					<div class="card-body" style="text-align: center;">
+						<h1>Missão</h1>
+						<p class="card-text">
+							Figurar entre as melhores instituições de ensino da Região Centro-Oeste, sendo reconhecida
+							por formar
+							cidadãos críticos e autônomos, bem como fornecer-lhes a base acadêmica necessária ao
+							ingresso no ensino
+							superior e às melhores posições no mundo profissional.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card align-items-center" style="width: 18rem; height: 446.6px;">
+					<img src="./static/img/valores.png" class="card-img-top" alt="Sunset Over the Sea"
+						style="height: 120px; width: 120px; margin-top: 20px;" />
+					<div class="card-body" style="text-align: center;">
+						<h1>Valores</h1>
+						<p class="card-text">
+							Respeito, Sustentabilidade, Cultura de Paz, Responsabilidade Social, Liderança, Qualidade,
+							Determinação,
+							Inovação, Transparência, Aprendizagem Intercultural, Princípios Cristãos.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card align-items-center" style="width: 18rem; height: 446.6px;">
+					<img src="./static/img/visao.png" class="card-img-top" alt="Sunset Over the Sea"
+						style="height: 120px; width: 110px; margin-top: 20px;" />
+					<div class="card-body" style="text-align: center;">
+						<h1>Visão</h1>
+						<p class="card-text">
+							Levar aos alunos novas formas de conhecimento por meio de profissionais qualificados e de
+							ferramentas que
+							conciliem a inovação e a tradição.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock conteudo %}

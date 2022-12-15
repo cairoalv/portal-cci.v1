@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{ url_for('static', filename='../static/img/banner-cci.jpg') }}" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='../static/img/banner.jpg') }}" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="{{ url_for('static', filename='../static/img/banner.jpg') }}" class="d-block w-100">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="fas fa-angle-left" style="font-size: 30px; margin-right:10px;" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <button class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="fas fa-angle-right" style="font-size: 30px; margin-left:10px;" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class="text-center">
+<video autoplay loop poster="#" style="background-color: #0D47A1; height: 80%; width: 80%; " muted>
+  <source src="{{ url_for('static', filename='../static/img/Vídeo Institucional - 2020.mp4') }}" type="video/mp4">
+</video>
+</div>
+<br>
+<br>
+<br>
+
+<div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-bottom:50px; margin-left:75px; margin-right:75px;">
+
+  <div class="col">
+    <div class="card h-100" style="max-width:250px; max-height:250px; margin:auto;">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road"/>
+      <div class="card-body">
+        <h6 class="card-title text-center" style="">Destaques</h6>
+        <p class="card-text text-center">Destaques</p>
+      </div>
+    </div>
+  </div>
+<div class="col">
+    <div class="card h-100" style="max-width:250px; max-height:250px; margin:auto;">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road"/>
+      <div class="card-body">
+        <h6 class="card-title text-center" style="">Destaques</h6>
+        <p class="card-text text-center">Destaques</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card h-100" style="max-width:250px; max-height:250px; margin:auto;">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+      <div class="card-body">
+        <h6 class="card-title text-center">Destaques</h6>
+        <p class="card-text text-center">Destaques</p>
+      </div>
+  </div>
+  </div>
+  <div class="col">
+    <div class="card h-100"style="max-width:250px; max-height:250px; margin:auto;">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+      <div class="card-body">
+        <h6 class="card-title text-center">Destaques</h6>
+        <p class="card-text text-center">Destaques</p>
+      </div>
+  </div>
+
+  </div>
+
+  </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-bottom:50px; margin-left:75px; margin-right:75px;">
+  <div class="col">
+    <div class="card h-100" style="max-width:250px; max-height:250px; margin:auto;">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road"/>
+      <div class="card-body">
+        <h6 class="card-title text-center" style="">Destaques</h6>
+        <p class="card-text text-center">Destaques</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" href="https://docs.google.com/forms/d/e/1FAIpQLSdrtLsH48jWkl2p15cjw-56xdATsbC8eSlU98KYP1AWfyOCOA/viewform?gxids=7628" style="max-width:250px; max-height:250px; margin:auto;">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+      <div class="card-body">
+        <h6 class="card-title text-center" >Destaques</h6>
+        <p class="card-text text-center">Destaques</p>
+      </div>
+  </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" style="max-width:250px; max-height:250px; margin:auto;">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/043.webp" class="card-img-top" alt="Los Angeles Skyscrapers"/>
+      <div class="card-body">
+        <h6 class="card-title text-center">Destaques</h6>
+        <p class="card-text text-center">Destaques</p>
+      </div>
+  </div>
+  </div>
+  <div class="col">
+    <div class="card h-100" style="max-width:250px; max-height:250px; margin:auto;">
+      <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/042.webp" class="card-img-top" alt="Palm Springs Road"/>
+      <div class="card-body">
+        <h6 class="card-title text-center" style="">Destaques</h6>
+        <p class="card-text text-center">Destaques</p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+    <span class="fas fa-angle-left" style="font-size: 30px; margin-right:10px;" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </a>
+  <button class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+    <span class="fas fa-angle-right" style="font-size: 30px; margin-left:10px;" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+{% endblock conteudo %}
