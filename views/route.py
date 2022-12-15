@@ -1,4 +1,4 @@
-from portalcci import app
+from __init__ import app
 from flask import render_template, request
 
 
