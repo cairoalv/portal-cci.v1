@@ -6,12 +6,6 @@ from flask import render_template, request
 @app.route('/')
 def home():
     return render_template(
-        r'base.html'
-    )
-
-@app.route('/home')
-def homepage():
-    return render_template(
         r'homepage.html'
     )
 
