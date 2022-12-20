@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 {% block conteudo %}
+
+<div class="text-center">
+
+  <p>
+    <a class="btn btn-primary" style="margin-top: 15px; " href="{{url_for('institucional')}}" role="button">Institucional</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px;" href="{{url_for('funcionamento')}}" role="button">Funcionamento</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px;" href="{{url_for('missao')}}" role="button">Missão</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('principios')}}" role="button">Princípios</a>
+    <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('regimento')}}" role="button">Regimento</a>
+  </p>
+
+</div>
+
 <p class="fs-1 fw-bold" style="text-align: center; margin-top: 25px;">Informações de Matrículas (Para 2023)</p>
 
 <div class="text-center"> <br>  <img src="../static/img/pqcci.jpg" height="600" width="800"  class="img-fluid hover-shadow" alt="Hollywood Sign on The Hill"> </div>
