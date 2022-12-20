@@ -109,3 +109,9 @@ def secretaria():
     return render_template(
         r'secretaria.html'
     )
+
+@app.route('/fale_conosco')
+def fale_conosco():
+    return render_template(
+        r'fale-conosco.html'
+    )

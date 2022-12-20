@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+
+<form style="margin-left: 10%; margin-right: 10%;">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+
+        <div class="form-outline mb-4" style="background-color: white;">
+          <input type="text" id="form6Example1" class="form-control" required/>
+          <label class="form-label" for="form6Example1">NOME</label>
+        </div>
+
+  
+    <!-- Text input -->
+    <div class="form-outline mb-4" style="background-color: white; max-width: 30%;">
+      <input type="text" id="form6Example2" class="form-control" />
+      <label class="form-label" for="form6Example2">TELEFONE</label>
+    </div>
+  
+    <!-- Email input -->
+    <div class="form-outline mb-4" style="background-color: white;">
+      <input type="email" id="form6Example5" class="form-control" />
+      <label class="form-label" for="form6Example5">Email</label>
+    </div>
+  
+    <!-- Number input -->
+    <select class="form-select" aria-label="Default select example" style="margin-bottom: 2%;">
+        <option selected>Falar com qual Setor</option>
+        <option value="1">Coordenadores e SOE</option>
+        <option value="2">Direção</option>
+        <option value="3">Escola Técnica</option>
+        <option value="4">Faculdade</option>
+        <option value="5">Secretaria de Atendimento</option>
+    </select>
+  
+    <!-- Message input -->
+    <div class="form-outline mb-4" style="background-color: white;">
+      <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+      <label class="form-label" for="form6Example7">Mensagem</label>
+    </div>
+  
+  
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>
+  </form>
+
+{% endblock conteudo %}
