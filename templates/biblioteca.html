@@ -1,8 +1,23 @@
 {% extends 'base.html' %}
 {% block conteudo %}
+
+<div class="text-center">
+
+    <p>
+      <a class="btn btn-primary" style="margin-top: 15px; " href="{{url_for('institucional')}}" role="button">Institucional</a>
+      <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px;" href="{{url_for('funcionamento')}}" role="button">Funcionamento</a>
+      <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px;" href="{{url_for('missao')}}" role="button">Missão</a>
+      <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('principios')}}" role="button">Princípios</a>
+      <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('regimento')}}" role="button">Regimento</a>
+      <a class="btn btn-primary" style="margin-top: 15px; margin-left: 15px" href="{{url_for('biblioteca')}}" role="button">Biblioteca</a>
+    </p>
+  
+  </div>
+
+
 <p class="fs-1 fw-bold" style="text-align: center; margin-top: 25px;">Biblioteca Tia Rosa</p>
 
-    <div class="row g-0 bg-light position-relative">
+    <div class="row g-0 position-relative"  >
         <div class="col-md-6 mb-md-0 p-md-4" style="max-width: 500px;">
             <img src="../static/img/bib.jpg" class="w-100" />
         </div>
