@@ -1,6 +1,17 @@
 from __init__ import app
-from flask import render_template, request
+from flask import render_template, request, flash, redirect
+from flask_mail import Mail, Message
 
+mail = Mail(app)
+
+class Contato:
+    def __init__(self, nome, telefone, email, setor, mensagem):
+        self.nome = nome
+        self.telefone = telefone
+        self.email = email
+        self.setor = setor
+        self.mensagem = mensagem
+        
 
 # Rotas principais
 @app.route('/')
@@ -115,3 +126,48 @@ def fale_conosco():
     return render_template(
         r'fale-conosco.html'
     )
+
+@app.route('/fale_conosco/send', methods=['GET','POST'])
+def send():
+    if request.method == 'POST':
+        formContato = Contato(
+            request.form['nome'],
+            request.form['telefone'],
+            request.form['email'],
+            request.form['setor'],
+            request.form['mensagem']    
+        )
+
+        if formContato.setor == "Coord":
+            email_envio = 'cairo.alvcosta@gmail.com'
+            setor = "Coordenadores e SOE"
+        elif formContato.setor == "Dir":
+            email_envio = 'suporte@portalcci.com.br'
+            setor = "Direção"
+        elif formContato.setor == "Tecs":
+            email_envio = 'cairo.costa@portalcci.com.br'
+            setor = 'Escola Técnica'
+        elif formContato.setor == "Fac":
+            email_envio = 'sosthenes@portalcci.com.br'
+            setor = 'Faculdade'
+        elif formContato.setor == "Setape":
+            email_envio = 'setape@portalcci.com.br'
+            setor = 'SETAPE'
+        elif formContato.setor == "Sec":
+            email_envio = 'candidato@portalcci.com.br' 
+            setor = 'Secretaria'   
+
+        msg = Message(
+            subject= f'{formContato.nome} entrou em contato atraves do Fale Conosco',
+            sender= app.config.get("MAIL_USERNAME"),
+            recipients=[email_envio],
+            body= f'''
+                {formContato.nome} com o e-mail {formContato.email}, te enviou a seguinte mensagem para o setor {setor}:
+
+                {formContato.mensagem}
+
+            '''
+        )
+        mail.send(msg)
+        flash('Mensagem enviada com sucesso!')
+    return redirect('/fale_conosco')

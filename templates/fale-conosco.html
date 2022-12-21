@@ -1,46 +1,68 @@
 {% extends 'base.html' %}
 {% block conteudo %}
 
-<form style="margin-left: 10%; margin-right: 10%;">
+<style>
+  #alert{
+    position: fixed;
+    z-index: 10;
+    right: 30px;
+  }
+</style>
+
+
+<form style="margin-left: 10%; margin-right: 10%;" action="/fale_conosco/send" method="POST">
     <!-- 2 column grid layout with text inputs for the first and last names -->
 
         <div class="form-outline mb-4" style="background-color: white;">
-          <input type="text" id="form6Example1" class="form-control" required/>
-          <label class="form-label" for="form6Example1">NOME</label>
+          <input type="text" id="form6Example1" class="form-control" name="nome" required/>
+          <label class="form-label" for="form6Example1">Nome</label>
         </div>
 
   
     <!-- Text input -->
     <div class="form-outline mb-4" style="background-color: white; max-width: 30%;">
-      <input type="text" id="form6Example2" class="form-control" />
-      <label class="form-label" for="form6Example2">TELEFONE</label>
+      <input type="text" id="form6Example2" class="form-control" name="telefone" required/>
+      <label class="form-label" for="form6Example2">Telefone</label>
     </div>
   
     <!-- Email input -->
     <div class="form-outline mb-4" style="background-color: white;">
-      <input type="email" id="form6Example5" class="form-control" />
+      <input type="email" id="form6Example5" class="form-control" name="email" required/>
       <label class="form-label" for="form6Example5">Email</label>
     </div>
   
     <!-- Number input -->
-    <select class="form-select" aria-label="Default select example" style="margin-bottom: 2%;">
+    <select class="form-select" aria-label="Default select example" style="margin-bottom: 2%;" name="setor" required>
         <option selected>Falar com qual Setor</option>
-        <option value="1">Coordenadores e SOE</option>
-        <option value="2">Direção</option>
-        <option value="3">Escola Técnica</option>
-        <option value="4">Faculdade</option>
-        <option value="5">Secretaria de Atendimento</option>
+        <option value="Coord">Coordenadores e SOE</option>
+        <option value="Dir">Direção</option>
+        <option value="Tecs">Escola Técnica</option>
+        <option value="Fac">Faculdade</option>
+        <option value="Setape">Setape</option>
+        <option value="Sec">Secretaria de Atendimento</option>
     </select>
   
     <!-- Message input -->
     <div class="form-outline mb-4" style="background-color: white;">
-      <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+      <textarea class="form-control" id="form6Example7" rows="4" name="mensagem" required></textarea>
       <label class="form-label" for="form6Example7">Mensagem</label>
     </div>
   
   
     <!-- Submit button -->
-    <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>
+  <div class="text-right">
+      <button type="submit" class="btn btn-primary mb-4" style="max-height: 40px; max-width: 200px;">Enviar Mensagem</button>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      {% for message in messages %}
+      <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert" style="max-height: 40px; max-width: 400px;">
+        <i class="far fa-check-circle"></i>{{message}}
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+  </div>
   </form>
+
 
 {% endblock conteudo %}
