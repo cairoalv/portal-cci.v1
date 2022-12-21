@@ -22,6 +22,10 @@
         rel="stylesheet"
         href="{{ url_for('static', filename='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css') }}"
     />
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css') }}"
+    />
 
     <!-- Google Fonts Roboto -->
     <link
@@ -41,6 +45,27 @@
     <title>Portal CCI</title>
 </head>
 
+<style>
+    .whatsapp-link{
+        position: fixed;
+        width: 40px;
+        height: 40px;
+        bottom: 80px;
+        right: 10px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 1px 1px 2px #888;
+        z-index: 1000;
+    }
+
+    .fa-whatsapp{
+        margin-top: 9px;
+    }
+</style>
+
 
 <body style="background-image: url( {{url_for('static', filename='../static/img/bngc.jpg')}} )">
     <header class="mb-5" style="margin-bottom: 0px; padding-bottom:0px;">
@@ -51,8 +76,8 @@
                     <div class="col-md-4 d-flex justify-content-center justify-content-md-start mb-3 mb-md-0">
                         <a href="{{url_for('home')}}#topo" class="ms-md-2">
                             <img src="{{ url_for('static', filename='../static/img/logo_cci-removebg-preview.png') }}" height="35" />
-                            <button type="button" class="btn btn-primary btn-rounded btn-sm" style="margin-left:90px; max-height: 40px; max-width: 200px;">Pré Matricula</button>
                         </a>
+                        <button type="button" class="btn btn-primary btn-rounded btn-sm" style="margin-left:90px; max-height: 40px; max-width: 200px;">Pré Matricula</button>
                         
                     </div>
 
@@ -116,6 +141,7 @@
 
 
         {% block conteudo %}
+
 
         {% endblock conteudo %}
 
@@ -255,6 +281,11 @@
     <!-- Footer -->
     <script type="text/javascript" src="../static/js/mdb.min.js"></script>
     <script type="text/javascript" src="../static/js/mdb.min.js.map"></script>
+
+
+<a class="whatsapp-link" href="#" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 
