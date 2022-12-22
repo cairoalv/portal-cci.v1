@@ -162,7 +162,7 @@ def send():
             sender= app.config.get("MAIL_USERNAME"),
             recipients=[email_envio],
             body= f'''
-                {formContato.nome} com o e-mail {formContato.email}, te enviou a seguinte mensagem para o setor {setor}:
+                {formContato.nome} com o e-mail {formContato.email} e telefone {formContato.telefone} enviou a seguinte mensagem para o setor {setor}:
 
                 {formContato.mensagem}
 
