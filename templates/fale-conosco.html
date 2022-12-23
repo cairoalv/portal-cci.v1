@@ -2,15 +2,18 @@
 {% block conteudo %}
 
 <style>
-  #alert{
-    position: fixed;
-    z-index: 10;
-    right: 30px;
+  .alert{
+
   }
+  
 </style>
 
+<div class="text-center" style="margin-bottom:50px;">
+  <img src="https://docs.google.com/uc?id=1HLq96xtmTpEJH7FnF_ErbJDp3hB8jIaZ" class="img-fluid" alt=""/>
+</div>
 
-<form style="margin-left: 10%; margin-right: 10%;" action="/fale_conosco/send" method="POST">
+
+<form id="forms1" style="margin-left: 10%; margin-right: 10%;" action="/fale_conosco/send" method="POST">
     <!-- 2 column grid layout with text inputs for the first and last names -->
 
         <div class="form-outline mb-4" style="background-color: white;">
@@ -52,17 +55,24 @@
     <!-- Submit button -->
   <div class="text-right">
       <button type="submit" class="btn btn-primary mb-4" style="max-height: 40px; max-width: 200px;">Enviar Mensagem</button>
-      {% with messages = get_flashed_messages() %}
-      {% if messages %}
-      {% for message in messages %}
-      <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert" style="max-height: 40px; max-width: 400px;">
-        <i class="far fa-check-circle"></i>{{message}}
-      </div>
-      {% endfor %}
-      {% endif %}
-      {% endwith %}
+
   </div>
   </form>
+
+  {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+        <div class="d-flex justify-content-end" style="top: 10%;">
+          <div id="alert" class="alert alert-success alert-dismissible fade show" role="alert" style="width: 200px; height: 50px; margin-right: 10%;">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <p style="font-size: small;"> <i class="far fa-check-circle"></i> {{message}} <span aria-hidden="true">&times;</span></p>
+          </div>
+        </div>
+        {% endfor %}
+      {% endif %}
+  {% endwith %}
+    
+
 
 
 {% endblock conteudo %}

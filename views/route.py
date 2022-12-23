@@ -162,12 +162,16 @@ def send():
             sender= app.config.get("MAIL_USERNAME"),
             recipients=[email_envio],
             body= f'''
-                {formContato.nome} com o e-mail {formContato.email} e telefone {formContato.telefone} enviou a seguinte mensagem para o setor {setor}:
+                Nome: {formContato.nome} 
+                Email: {formContato.email} 
+                Telefone {formContato.telefone} 
+                Enviou a seguinte mensagem para o setor: {setor}
+
 
                 {formContato.mensagem}
 
             '''
         )
         mail.send(msg)
-        flash('Mensagem enviada com sucesso!')
-    return redirect('/fale_conosco')
+        flash("Mensagem enviada com sucesso!", "alert")
+        return redirect('/fale_conosco#forms1')
